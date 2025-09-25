@@ -23,7 +23,12 @@ header {
     height: 80px;
     display: flex;
     align-items: center;
+}
+header .container {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 /* FELADAT 2: LOGO STÍLUSOK */
@@ -36,6 +41,7 @@ header {
     color: white;
     font-size: 24px;
     font-weight: bold;
+    
 }
 
 /* FELADAT 3: NAVIGÁCIÓ STÍLUSOK */
@@ -52,7 +58,8 @@ nav ul {
 
 nav li {
     /* ITT ÍRD A KÓDOT */
-    display: inline;
+    align-items: center;
+    display: inline-flex;
 }
 
 /* FELADAT 4: NAVIGÁCIÓS LINKEK */
@@ -64,6 +71,8 @@ nav a {
     /* ITT ÍRD A KÓDOT */
     color: white;
     text-decoration: none;
+    padding: 10px;
+ 
 }
 
 nav a:hover {
@@ -116,7 +125,9 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    
 }
+
 
 /* FELADAT 8: BLOG GRID */
 /* TODO: A blog grid-et alakítsd át:
@@ -212,14 +223,23 @@ footer {
     - Nav elemek: függőleges elrendezés */
 @media (max-width: 768px) {
     /* ITT ÍRD A KÓDOT */
-    .blog-grid {
-        grid-template-columns: 1fr;
+    header {
+        height: auto;
+        padding: 20px 0;
     }
-    .hero h1 {
-        font-size: 36px;
+    header .container {
+        flex-direction: column;
+    }
+    nav {
+        width: 100%;
+        margin-top: 20px;
     }
     nav ul {
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
+    }
+    nav li {
+        width: 100%;
+        justify-content: center;
     }
 }
